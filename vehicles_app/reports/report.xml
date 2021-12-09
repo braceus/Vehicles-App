@@ -1,0 +1,16 @@
+<odoo>
+    <!--<record id="vehicles_app.paperformat_portrait_a4" model="report.paperformat">
+        <field name="name">Formato A4</field>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="default" eval="False"/>
+        <field name="dpi" eval="90"/>
+
+    </record>-->
+    <report id="vehicles_app.action_report_service"
+            string="Detalle de Servicio"
+            model="va.vehiculo"
+            report_type="qweb-pdf"
+            name="vehicles_app.report_service"
+            print_report_name="'Detalle de Servicio'"/>
+</odoo>

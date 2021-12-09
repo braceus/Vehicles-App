@@ -1,0 +1,34 @@
+<odoo>
+    <record model="ir.ui.view" id="view_tree_services">
+        <field name="name">vehicles_app.view_tree_service</field>
+        <field name="model">va.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_form_services">
+        <field name="name">vehicles_app.view_form_service</field>
+        <field name="model">va.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" string="Nombre"/>
+                        <field name="amount" string="Precio"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="vehicles_app.action_view_services" model="ir.actions.act_window">
+        <field name="name">Servicios</field>
+        <field name="res_model">va.service</field>
+    </record>
+
+    <menuitem id="menu_services" name="Servicios" parent="vehicles_app.menu_main_vehicles" action="vehicles_app.action_view_services"/>
+</odoo>
